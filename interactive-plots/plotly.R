@@ -21,3 +21,10 @@ subplot(
     plot_ly(fmv, type = "line", x = date, y = cRate, name = "Conversion Rate"),
     margin = 0.05
 ) %>% layout(showlegend = F)
+
+# What about that ggplot to plotly thingy?
+
+ggplot(aes(x = date, y = ARPDAU), data = fmv) +
+    geom_line()
+
+ggplotly()
