@@ -1,0 +1,53 @@
+---
+title:  RMarkdown Tests
+author:
+- Ricardo Vladimiro
+- John Doe
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: null
+    theme: cosmo
+    toc: yes
+    toc_float:
+      collapsed: no
+---
+
+## Stuff tested
+
+### YAML
+
+- Multiple authors. Note that Ricardo Vladimiro and John Doe are authors.
+- Automatic date. The date is generated automatically.
+- Floating table of contents. As noted on the left.
+- Tabbed content. As the next section.
+- Code folding. Code is present throught the document but hidden by default. Each code section can be hidden or showed and there's an option to show all code on the top right of the page.
+
+### Tabbed Sections  {.tabset .tabset-fade}
+
+#### Nice graphics
+
+```{r pressure}
+getwd()
+plot(pressure)
+```
+
+#### Just to make a point
+
+This is just to show that this was in fact a different section.
+
+```{r ggplot2}
+library(ggplot2)
+ggplot(diamonds, aes(depth, colour = cut)) +
+  geom_density() +
+  xlim(55, 70)
+
+
+```
+
+## The mandatory Lore Ipsum
+
+With quotes and all!
+
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
