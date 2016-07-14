@@ -24,7 +24,7 @@ subplot(
 
 # What about that ggplot to plotly thingy?
 
-ggplot(aes(x = date, y = ARPDAU), data = fmv) +
+p <- ggplot(aes(x = date, y = ARPDAU), data = fmv) +
     geom_line()
 
-ggplotly()
+ggplotly(p)
